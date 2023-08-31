@@ -1,0 +1,11 @@
+sx={{
+
+        backgroundImage : `url(${backgroundImagePath})`,
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+
+    }}
