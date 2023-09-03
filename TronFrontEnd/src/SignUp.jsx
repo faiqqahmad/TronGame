@@ -11,6 +11,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createUserWithEmailAndPassword } from '@firebase/auth';
+import { auth } from "./firebase.js"
 
 
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -21,10 +23,14 @@ export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    createUserWithEmailAndPassword(auth, data.get("email"), data.get("password"))
+      .then((userCredential) => {
+        console.log(userCredential);
+        
+      })
+      .catch((error) => {
+        console.log(error)
+      });
   };
 
   return (
@@ -86,12 +92,6 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
                 />
               </Grid>
             </Grid>
