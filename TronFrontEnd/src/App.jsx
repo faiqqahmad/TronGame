@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@emotion/react"
 import LandingPage from "./LandingPage"
+import PlayScreenPage from "./PlayScreenPage"
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 
@@ -7,6 +8,6 @@ import SignUp from "./SignUp"
 
 export default function App() {
   return <>
-    <SignUp></SignUp>
+    <PlayScreenPage></PlayScreenPage>
   </>
 }
