@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meeta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Socket thing1</title>
+    </head>
+    <body>
+        Client2
+        <button>Send Msg</button>
+    </body>
+    <script>
+        //create websocket connection.
+        const socket = new WebSocket("ws://localhost:4000")
+
+        // connection opened
+        socket.addEventListener('open', function(event) {
+            socket.send("Hellow Server!")
+        })
+
+        // listen for messages
+        socket.addEventListener('message', function (event) {
+            console.log('Message from server', event.data)
+        })
+
+        const sendMessge = () => {
+            socket.send('Hellow from client2!')
+        }
+    </script>
+</html>
