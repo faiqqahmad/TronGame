@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const socket = io.connect("http://localhost:5174");
 
-function App() {
+function webSocketFrontEnd() {
   //Room State
   const [room, setRoom] = useState("");
 
