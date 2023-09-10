@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <meeta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Socket thing1</title>
     </head>
     <body>
@@ -15,7 +14,7 @@
 
         // connection opened
         socket.addEventListener('open', function(event) {
-            socket.send("Hellow Server!")
+            socket.send("Hello Server!")
         })
 
         // listen for messages
@@ -24,7 +23,7 @@
         })
 
         const sendMessge = () => {
-            socket.send('Hellow from client1!')
+            socket.send('Hello from client1!')
         }
     </script>
 </html>

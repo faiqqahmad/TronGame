@@ -1,0 +1,21 @@
+
+
+waiting for players screen
+
+countdown before game starts
+
+pvp
+    if head hits head, both die 
+    if head hits body, head dies
+
+score is going to be length of body
+
+powerups
+    speed - increases the rate of movement
+    bomb - after a short period of time, any players in a certain radius will die
+    extra score - the player gets extra score and lengthens their trail
+
+length increases over time
+
+fixed bounding box
+
